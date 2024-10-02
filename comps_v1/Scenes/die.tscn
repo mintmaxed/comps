@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcl1d0svjsci7"]
+
+[ext_resource type="PackedScene" uid="uid://dpueux4ve2gld" path="res://Assets/dice_test.glb" id="1_h1jub"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gi8rm"]
+
+[node name="die" type="RigidBody3D"]
+freeze = true
+
+[node name="dice_test" parent="." instance=ExtResource("1_h1jub")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_gi8rm")
