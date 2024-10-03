@@ -1,8 +1,7 @@
 class_name Jump
 extends Move
 
-
-const JUMP_VELOCITY = 5.0
+const JUMP_VELOCITY = 3.0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func check_relevance(input : InputPackage):
@@ -12,7 +11,7 @@ func check_relevance(input : InputPackage):
 	return "okay"
 
 func update(input, delta):
-	player.velocity.y == gravity * delta
+	player.velocity.y -= gravity * delta
 	player.move_and_slide()
 	
 func on_enter_state():

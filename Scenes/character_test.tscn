@@ -50,4 +50,6 @@ script = ExtResource("5_jaipd")
 script = ExtResource("6_es8a1")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.911303, 0.411737, 0, -0.411737, 0.911303, 0, 5.67257, 9.67455)
+transform = Transform3D(0.707107, -0.290985, 0.644459, 0, 0.911403, 0.411514, -0.707107, -0.290985, 0.644459, 10, 5, 10)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
