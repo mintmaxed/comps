@@ -6,7 +6,7 @@ extends CharacterBody3D
 
 func _ready():
 	visuals.accept_skeleton(model.skeleton)
-	model.animator.play("Running_A")
+	model.animator.play("Running_B")
 	
 
 func _physics_process(delta):

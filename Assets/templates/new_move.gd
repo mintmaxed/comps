@@ -1,11 +1,15 @@
-extends Node
+class_name NewMove
+extends Move
+# class name to correspond with move type
 
-
-# Called when the node enters the scene tree for the first time.
+# redefine parameters and functions to override
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+	animation = "animation_name"
+	
+# check relevance (order)
+func check_relevance(input : InputPackage):
+	pass
+	
+# update function
+func update(input : InputPackage, delta : float):
 	pass
