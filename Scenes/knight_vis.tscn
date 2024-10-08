@@ -571,91 +571,87 @@ shadow_mesh = SubResource("ArrayMesh_cy5ib")
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_xqh6s")
 
-[node name="Knight_ArmLeft" type="MeshInstance3D" parent="."]
+[node name="body" type="Node3D" parent="."]
+
+[node name="Knight_ArmLeft" type="MeshInstance3D" parent="body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112736, 0, -0.415864)
 mesh = SubResource("ArrayMesh_a0rpq")
 skin = SubResource("Skin_mpe7v")
+skeleton = NodePath("../..")
 
-[node name="Knight_ArmRight" type="MeshInstance3D" parent="."]
+[node name="Knight_ArmRight" type="MeshInstance3D" parent="body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112736, 0, -0.415864)
 mesh = SubResource("ArrayMesh_25p1o")
 skin = SubResource("Skin_mpe7v")
 skeleton = NodePath("")
 
-[node name="Knight_Body" type="MeshInstance3D" parent="."]
+[node name="Knight_Body" type="MeshInstance3D" parent="body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112736, 0, -0.415864)
 mesh = SubResource("ArrayMesh_t3f4s")
 skin = SubResource("Skin_mpe7v")
 skeleton = NodePath("")
 
-[node name="Knight_Head" type="MeshInstance3D" parent="."]
+[node name="Knight_Head" type="MeshInstance3D" parent="body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112736, 0, -0.415864)
 mesh = SubResource("ArrayMesh_k4wvs")
 skin = SubResource("Skin_mpe7v")
 skeleton = NodePath("")
 
-[node name="Knight_LegLeft" type="MeshInstance3D" parent="."]
+[node name="Knight_LegLeft" type="MeshInstance3D" parent="body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112736, 0, -0.415864)
 mesh = SubResource("ArrayMesh_30iil")
 skin = SubResource("Skin_mpe7v")
 skeleton = NodePath("")
 
-[node name="Knight_LegRight" type="MeshInstance3D" parent="."]
+[node name="Knight_LegRight" type="MeshInstance3D" parent="body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112736, 0, -0.415864)
 mesh = SubResource("ArrayMesh_jf5tm")
 skin = SubResource("Skin_mpe7v")
 skeleton = NodePath("")
 
-[node name="1H_Sword_Offhand" type="MeshInstance3D" parent="."]
+[node name="extras" type="Node3D" parent="."]
+
+[node name="1H_Sword_Offhand" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(-0.999999, -1.09847e-07, -1.26916e-07, -1.33741e-07, -5.60721e-07, 0.999999, -3.90708e-08, 0.999999, 5.63844e-07, 0.883132, 1.04926, 0.017011)
-visible = false
 mesh = SubResource("ArrayMesh_s5gjk")
 skeleton = NodePath("")
 
-[node name="Badge_Shield" type="MeshInstance3D" parent="."]
+[node name="Badge_Shield" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(-0.999999, 2.42533e-06, -7.94378e-07, -8.01206e-07, -7.67352e-07, 0.999999, 2.49611e-06, 0.999999, 7.70477e-07, 0.883132, 1.20515, 0.0170111)
-visible = false
 mesh = SubResource("ArrayMesh_hnlf6")
 skeleton = NodePath("")
 
-[node name="Rectangle_Shield" type="MeshInstance3D" parent="."]
+[node name="Rectangle_Shield" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(-0.999999, 2.42533e-06, -7.94378e-07, -8.01206e-07, -7.67352e-07, 0.999999, 2.49611e-06, 0.999999, 7.70477e-07, 0.883132, 1.20515, 0.0170111)
-visible = false
 mesh = SubResource("ArrayMesh_mm6tk")
 skeleton = NodePath("")
 
-[node name="Round_Shield" type="MeshInstance3D" parent="."]
+[node name="Round_Shield" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(-0.999999, 2.42533e-06, -7.94378e-07, -8.01206e-07, -7.67352e-07, 0.999999, 2.49611e-06, 0.999999, 7.70477e-07, 0.883132, 1.20515, 0.0170111)
-visible = false
 mesh = SubResource("ArrayMesh_el6gt")
 skeleton = NodePath("")
 
-[node name="Spike_Shield" type="MeshInstance3D" parent="."]
+[node name="Spike_Shield" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(-0.999999, 2.42533e-06, -7.94378e-07, -8.01206e-07, -7.67352e-07, 0.999999, 2.49611e-06, 0.999999, 7.70477e-07, 0.883132, 1.20515, 0.0170111)
-visible = false
 mesh = SubResource("ArrayMesh_tcu6d")
 skeleton = NodePath("")
 
-[node name="1H_Sword" type="MeshInstance3D" parent="."]
+[node name="1H_Sword" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(0.999999, 1.13574e-07, -5.12362e-07, -4.49339e-07, -8.58306e-07, -0.999999, 2.05328e-08, 1, -7.42514e-07, -0.883132, 1.04926, 0.0333085)
-visible = false
 mesh = SubResource("ArrayMesh_xq2ku")
 skeleton = NodePath("")
 
-[node name="2H_Sword" type="MeshInstance3D" parent="."]
+[node name="2H_Sword" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(0.999999, 9.88405e-08, -4.98676e-07, -4.35653e-07, -8.58306e-07, -0.999999, 3.52662e-08, 1, -7.42514e-07, -0.883132, 1.04926, 0.0333085)
-visible = false
 mesh = SubResource("ArrayMesh_wr3cw")
 skeleton = NodePath("")
 
-[node name="Knight_Helmet" type="MeshInstance3D" parent="."]
+[node name="Knight_Helmet" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(0.99972, -1.40143e-09, 0.0236466, 1.39341e-09, 1, 3.55686e-10, -0.0236466, -3.22637e-10, 0.99972, -0.112736, 1.20229, -0.415864)
-visible = false
 mesh = SubResource("ArrayMesh_2ju4i")
 skeleton = NodePath("")
 
-[node name="Knight_Cape" type="MeshInstance3D" parent="."]
+[node name="Knight_Cape" type="MeshInstance3D" parent="extras"]
 transform = Transform3D(0.996275, -5.14962e-09, 0.0862353, 5.13043e-09, 1, 4.44077e-10, -0.0862353, 1.88007e-15, 0.996275, -0.112736, 1.20229, -0.415864)
-visible = false
 mesh = SubResource("ArrayMesh_h5cl3")
 skeleton = NodePath("")

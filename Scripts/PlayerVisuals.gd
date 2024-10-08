@@ -3,22 +3,22 @@ class_name PlayerVisuals
 
 # @onready var model : PlayerModel
 
-@onready var left_arm = $Knight_ArmLeft
-@onready var right_arm = $Knight_ArmRight
-@onready var body = $Knight_Body
-@onready var head = $Knight_Head
-@onready var left_leg = $Knight_LegLeft
-@onready var right_leg = $Knight_LegRight
+@onready var left_arm = $body/Knight_ArmLeft
+@onready var right_arm = $body/Knight_ArmRight
+@onready var body = $body/Knight_Body
+@onready var head = $body/Knight_Head
+@onready var left_leg = $body/Knight_LegLeft
+@onready var right_leg = $body/Knight_LegRight
 
-@onready var h1_sword_offhand = $"1H_Sword_Offhand"
-@onready var badge_shield = $Badge_Shield
-@onready var rectangle_shield = $Rectangle_Shield
-@onready var round_shield = $Round_Shield
-@onready var spike_shield = $Spike_Shield
-@onready var h1_sword = $"1H_Sword"
-@onready var h2_sword = $"2H_Sword"
-@onready var helmet = $Knight_Helmet
-@onready var cape = $Knight_Cape 
+@onready var h1_sword_offhand = $extras/"1H_Sword_Offhand"
+@onready var badge_shield = $extras/Badge_Shield
+@onready var rectangle_shield = $extras/Rectangle_Shield
+@onready var round_shield = $extras/Round_Shield
+@onready var spike_shield = $extras/Spike_Shield
+@onready var h1_sword = $extras/"1H_Sword"
+@onready var h2_sword = $extras/"2H_Sword"
+@onready var helmet = $extras/Knight_Helmet
+@onready var cape = $extras/Knight_Cape 
 
 func accept_skeleton(skeleton : Skeleton3D) :
 	left_arm.skeleton = skeleton.get_path()

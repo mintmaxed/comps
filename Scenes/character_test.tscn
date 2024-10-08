@@ -1,12 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dllw6uw0boqh"]
+[gd_scene load_steps=8 format=3 uid="uid://dllw6uw0boqh"]
 
 [ext_resource type="PackedScene" uid="uid://ccj02vkvmr3vx" path="res://Scenes/player.tscn" id="1_6muoy"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="2_x2sap"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asta7"]
 albedo_color = Color(0.811765, 0.458824, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eijqk"]
 albedo_color = Color(0.403922, 0.698039, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q0o1"]
+albedo_color = Color(1, 0.0509804, 0.223529, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1mfha"]
+material = SubResource("StandardMaterial3D_2q0o1")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mbriy"]
 
 [node name="character test" type="Node3D"]
 
@@ -35,3 +44,19 @@ transform = Transform3D(1, 0, 0, 0, 0.788011, 0.615662, 0, -0.615662, 0.788011, 
 fov = 53.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
+
+[node name="enemy" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54087, 4.57855)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_x2sap")
+
+[node name="mesh" type="MeshInstance3D" parent="enemy"]
+mesh = SubResource("CapsuleMesh_1mfha")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="enemy"]
+shape = SubResource("CapsuleShape3D_mbriy")
+
+[node name="AcceptDialog" type="AcceptDialog" parent="enemy"]
+visible = true
