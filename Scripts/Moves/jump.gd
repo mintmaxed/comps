@@ -1,7 +1,7 @@
 class_name Jump
 extends Move
 
-const JUMP_VELOCITY = 3.0
+@export var JUMP_VELOCITY = 3.0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func check_relevance(input : InputPackage):

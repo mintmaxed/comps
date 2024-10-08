@@ -4,12 +4,15 @@ extends Node
 # flags, variables
 var player : CharacterBody3D
 
+var animation : String
+
 static var moves_priority : Dictionary = {
 	# hardcoded order of priority for controller to determine what state to apply at any given point
 	# for any given input, or lack thereof
 	# higher # higher priority
 	"idle": 1,
 	"run": 2,
+	"sprint": 3,
 	"jump": 10
 }
 
