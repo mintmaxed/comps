@@ -3,6 +3,7 @@ extends Node
 
 @onready var player = $".."
 @onready var skeleton = $Rig/Skeleton3D
+@onready var test_skeleton = $Rig/Skeleton3D/Knight_Helmet
 @onready var animator = $AnimationPlayer
 
 var current_move : Move 

@@ -46,9 +46,8 @@ fov = 53.0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
 
 [node name="enemy" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54087, 4.57855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 4)
 collision_layer = 3
-collision_mask = 3
 script = ExtResource("2_x2sap")
 
 [node name="mesh" type="MeshInstance3D" parent="enemy"]

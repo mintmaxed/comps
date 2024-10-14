@@ -7,6 +7,7 @@ extends CharacterBody3D
 
 func _ready():
 	visuals.accept_skeleton(model.skeleton)
+	visuals.test_skeleton(model.test_skeleton)
 	model.animator.play("Running_B")
 	
 
@@ -14,7 +15,7 @@ func _physics_process(delta):
 	var input = input_gatherer.gather_input()
 	model.update(input, delta)
 	
-	var collision = move_and_collide(velocity * delta)
+	var collision = move_and_collide(velocity * delta, true)
 	if collision:
 		enemy.enemy_health -= 1
 	

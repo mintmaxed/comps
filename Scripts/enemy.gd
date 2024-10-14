@@ -6,7 +6,7 @@ extends CharacterBody3D
 @onready var enemy = $"."
 
 func _ready():
-	enemy.position = Vector3(0,3,5)
+	enemy.position = Vector3(-5, 2, 4)
 		
 func _process(delta):
 	if (enemy_health > 0):
