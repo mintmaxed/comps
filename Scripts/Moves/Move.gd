@@ -5,6 +5,10 @@ extends Node
 var player : CharacterBody3D
 
 var animation : String
+var move_name : String
+var has_queued_move : bool = false
+
+var enter_state_time : float
 
 static var moves_priority : Dictionary = {
 	# hardcoded order of priority for controller to determine what state to apply at any given point
