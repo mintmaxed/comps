@@ -26,22 +26,21 @@ size = Vector3(20, 1, 20)
 
 [node name="side_2" type="CSGBox3D" parent="ground"]
 transform = Transform3D(0.939466, 0, -2.90376e-08, -2.90376e-08, -2.90376e-08, -0.939466, 0, 0.939467, -2.90376e-08, 0, -7, 9)
+visible = false
 use_collision = true
 size = Vector3(20, 1, 15)
 material = SubResource("StandardMaterial3D_asta7")
 
 [node name="side_1" type="CSGBox3D" parent="ground"]
 transform = Transform3D(0, 0.939467, -2.90376e-08, 2.90376e-08, -2.90376e-08, -0.939466, -0.939466, 0, -2.90376e-08, -9, -7, 0)
+visible = false
 use_collision = true
 size = Vector3(20, 1, 15)
 material = SubResource("StandardMaterial3D_eijqk")
 
-[node name="Player" parent="." instance=ExtResource("1_6muoy")]
-transform = Transform3D(0.939467, 0, 0, 0, 0.939467, 0, 0, 0, 0.939467, 0, 0.668855, 0)
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.788011, 0.615662, 0, -0.615662, 0.788011, 0, 10, 22)
-fov = 53.0
+transform = Transform3D(1, 0, 0, 0, 0.866026, 0.5, 0, -0.5, 0.866026, 0, 11, 22)
+fov = 29.2
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
 
@@ -59,3 +58,5 @@ shape = SubResource("CapsuleShape3D_mbriy")
 
 [node name="AcceptDialog" type="AcceptDialog" parent="enemy"]
 visible = true
+
+[node name="Player" parent="." instance=ExtResource("1_6muoy")]

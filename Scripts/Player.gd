@@ -11,11 +11,12 @@ func _ready():
 	# model.animator.play("Running_B")
 	pass
 	
-
 func _physics_process(delta):
 	var input = input_gatherer.gather_input()
 	model.update(input, delta)
 	
+	
+	# this is a BAD way to do this!
 	var collision = move_and_collide(velocity * delta, true)
 	if collision:
 		enemy.enemy_health -= 1

@@ -3,7 +3,7 @@ extends Node
 
 @onready var player = $".."
 # @onready var skeleton = $Rig/Skeleton3D
-@onready var animator = $AnimationPlayer
+@onready var animator = $"../AnimationPlayer"
 
 var current_move : Move 
 
@@ -14,7 +14,7 @@ var current_move : Move
 }
 
 func _ready():
-	current_move =  moves["idle"]
+	current_move = moves["idle"]
 	for move in moves.values():
 		move.player = player
 

@@ -9,6 +9,10 @@ func _ready():
 	animation = "Running_A"
 
 func check_relevance(input : InputPackage):
+	if ! player.is_on_floor():
+		# return "midair"
+		pass
+	
 	input.actions.sort_custom(moves_priority_sort)
 	if input.actions[0] == "run":
 		return "okay"
