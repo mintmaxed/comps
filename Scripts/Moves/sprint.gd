@@ -3,7 +3,6 @@ extends Move
 
 @export var SPRINT_SPEED = 6.0
 
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func check_relevance(input : InputPackage):
 	input.actions.sort_custom(moves_priority_sort)

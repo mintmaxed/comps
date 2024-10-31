@@ -58,5 +58,7 @@ shape = SubResource("CapsuleShape3D_mbriy")
 
 [node name="AcceptDialog" type="AcceptDialog" parent="enemy"]
 visible = true
+dialog_hide_on_ok = false
 
 [node name="Player" parent="." instance=ExtResource("1_6muoy")]
+transform = Transform3D(0.939467, 0, 0, 0, 0.939467, 0, 0, 0, 0.939467, 0, 1.12845, 0)

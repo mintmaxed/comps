@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://b3vxrvwb5udlw"]
 
 [ext_resource type="Texture2D" uid="uid://c8lramy42k2ow" path="res://Assets/Knight_knight_texture.png" id="1_k5q5h"]
-[ext_resource type="Script" path="res://Scripts/PlayerVisuals.gd" id="1_xqh6s"]
+[ext_resource type="Script" path="res://Scripts/player/PlayerVisuals.gd" id="1_xqh6s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8ssx"]
 resource_name = "knight_texture"

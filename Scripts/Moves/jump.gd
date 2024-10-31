@@ -2,7 +2,6 @@ class_name Jump
 extends Move
 
 @export var JUMP_VELOCITY = 3.0
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func check_relevance(input : InputPackage):
 	if player.is_on_floor():
