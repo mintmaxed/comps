@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="comps_v1"
+config/name="comps_v2"
 run/main_scene="res://Scenes/character_test.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
